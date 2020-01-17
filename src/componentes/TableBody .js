@@ -5,7 +5,7 @@ export default function  TableBody  ({autores, setAutores})  {
     const linhas = autores.map((linha, index) => {
 
         return (
-            <tr>
+            <tr key={index}>
                 <td>{linha.nome}</td>
                 <td>{linha.livro}</td>
                 <td>{linha.preco}</td>
