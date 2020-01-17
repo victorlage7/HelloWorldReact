@@ -1,27 +1,22 @@
 import React from 'react';
 
-export default function  TableBody  ()  {
+export default function  TableBody  ({autores, setAutores})  {
+    
+    const linhas = autores.map((linha, index) => {
+
+        return (
+            <tr>
+                <td>{linha.nome}</td>
+                <td>{linha.livro}</td>
+                <td>{linha.preco}</td>
+                <td><button>Remover</button></td>
+            </tr>
+        )
+    });
+
     return(
         <tbody>
-            <tr>
-                <td>Paulo</td>
-                <td>React</td>
-                <td>1000</td>
-                <td><button>Remover</button></td>
-            </tr>
-            <tr>
-                <td>Nico</td>
-                <td>React</td>
-                <td>1000</td>
-                <td><button>Remover</button></td>
-            </tr>
-            <tr>
-                <td>Daniel</td>
-                <td>React</td>
-                <td>1000</td>
-                <td><button>Remover</button></td>
-            </tr>
+            {linhas}
         </tbody>
-    
-        );
+    );
 }
