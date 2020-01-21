@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function  TableBody  ({autores, setAutores})  {
 
+
+
     const onChangeAutores = (id) => {
         const listaAutores = autores.filter(autores => autores.nome+autores.livro+autores.preco !== id)
         setAutores(listaAutores)
@@ -9,7 +11,7 @@ export default function  TableBody  ({autores, setAutores})  {
         
     const linhas = autores.map((linha, index) => {
         return (
-            <tr key={linha.id}>
+            <tr key={index}>
                 <td>{linha.nome}</td>
                 <td>{linha.livro}</td>
                 <td>{linha.preco}</td>

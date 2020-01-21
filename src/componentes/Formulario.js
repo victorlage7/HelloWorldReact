@@ -1,43 +1,49 @@
 import React,{useState} from 'react';
 
-export default function  Formulario ()  {
+export default function  Formulario ({autores, setAutores})  {
 
     const [nome, setNome] = useState('');
     const [livro, setLivro] = useState('');
     const [preco, setPreco] = useState('');
 
-    return (
-        <form>
-            <label for="nome">Nome</label>
+    // const handleSubmit = ({evt}) =>{
+    //     evt.preventDefault();
+    //     alert("Submitting Name")
+    //     //setAutores({ autores:[autores, autor]})
+    // }
+
+   return (
+    <form >
+            <label htmlFor="nome">Nome</label>
             <input
                 id="nome"
                 type="text"
                 name="nome"
+                value={nome}
+                onChange={e => setNome(e.target.value)}
             />
 
-            <label for="livro">Livro</label>
+            <label htmlFor="livro">Livro</label>
             <input
                 id="livro"
                 type="text"
                 name="livro"
+                value={livro}
+                onChange={e => setLivro(e.target.value)}
             />
 
 
-            <label for="preco">Preço</label>
+            <label htmlFor="preco">Preço</label>
             <input
                 id="preco"
                 type="text"
                 name="preco"
+                value={preco}
+                onChange={e => setPreco(e.target.value)}
             />
-
-
-            <button type="button">Salvar</button>
+            <button /*onClick = {e => handleSubmit(e.target.value) }*/  type="button">Salvar</button>
         </form>
 
     )
-
-}
-
-
 
 }
