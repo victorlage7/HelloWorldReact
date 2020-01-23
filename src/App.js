@@ -39,8 +39,10 @@ export default function App() {
   return (
     <Fragment>
       <Header/>
+      <div className="container .mb-10">
       <Tabela autores = { autores} setAutores = {setAutores} />
       <Form   autores = { autores} setAutores = {setAutores} />
+      </div>
     </Fragment>
   );
 }
