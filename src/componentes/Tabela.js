@@ -6,7 +6,7 @@ export default function Tabela({autores, setAutores}) {
 
     return(
       
-        <table>
+        <table className="centered highlight">
         <TableHead/>
         <TableBody autores = {autores} setAutores = {setAutores} />
        </table>

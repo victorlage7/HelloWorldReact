@@ -15,7 +15,8 @@ export default function  TableBody  ({autores, setAutores})  {
                 <td>{linha.nome}</td>
                 <td>{linha.livro}</td>
                 <td>{linha.preco}</td>
-                <td><button onClick = {() => {onChangeAutores(linha.nome+linha.livro+linha.preco) }}>Remover</button></td>
+                <td><button onClick = {() => {onChangeAutores(linha.nome+linha.livro+linha.preco)}
+            }className="waves-effect waves-light indigo lighten-2 btn">Remover</button></td>
             </tr>
         )
     });

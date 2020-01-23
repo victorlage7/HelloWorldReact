@@ -1,7 +1,9 @@
 import React,{useState,Fragment} from 'react';
-import './App.css';
+import 'materialize-css/dist/css/materialize.min.css';
 import Tabela from './componentes/Tabela'
 import Form from './componentes/Formulario'
+
+import Header from './Header'
 
 
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
 
   return (
     <Fragment>
+      <Header/>
       <Tabela autores = { autores} setAutores = {setAutores} />
       <Form   autores = { autores} setAutores = {setAutores} />
     </Fragment>

@@ -8,36 +8,43 @@ export default function Formulario({ autores, setAutores }) {
 
     setAutores([...autores, autor]);
   };
-  const {nome, livro, preco} = autor
+  const { nome, livro, preco } = autor;
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="nome">Nome</label>
-      <input
-        id="nome"
-        type="text"
-        name="nome"
-        value={nome}
-        onChange={e => setAutor({...autor, nome: e.target.value})}
-      />
+      <div className="row">
+        <div className="input-field col s4">
+          <label className="input-field" htmlFor="nome">Nome</label>
+          <input
+            id="nome"
+            type="text"
+            name="nome"
+            value={nome}
+            onChange={e => setAutor({ ...autor, nome: e.target.value })}
+          />
+        </div>
 
-      <label htmlFor="livro">Livro</label>
-      <input
-        id="livro"
-        type="text"
-        name="livro"
-        value={livro}
-        onChange={e => setAutor({...autor, livro: e.target.value})}
-      />
-
-      <label htmlFor="preco">Preço</label>
-      <input
-        id="preco"
-        type="text"
-        name="preco"
-        value={preco}
-        onChange={e => setAutor({...autor, preco: e.target.value})}
-      />
-      <button type="submit">Salvar</button>
+        <div className="input-field col s4">
+          <label className="input-field" htmlFor="Livro: ">Livro</label>
+          <input
+            id="livro"
+            type="text"
+            name="livro"
+            value={livro}
+            onChange={e => setAutor({ ...autor, livro: e.target.value })}
+          />
+        </div>
+        <div className="input-field col s4">
+          <label className="input-field" htmlFor="preco">Preço</label>
+          <input
+            id="preco"
+            type="text"
+            name="preco"
+            value={preco}
+            onChange={e => setAutor({ ...autor, preco: e.target.value })}
+          />
+        </div>
+        <button className="waves-effect waves-light indigo lighten-2 btn" type="submit">Salvar</button>
+      </div>
     </form>
   );
 }
