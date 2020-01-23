@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
 export default function Formulario({ autores, setAutores }) {
-  //   const [nome, setNome] = useState("");
-  //   const [livro, setLivro] = useState("");
-  //   const [preco, setPreco] = useState("");
   const [autor, setAutor] = useState({ nome: "", livro: "", preco: "" });
 
   const handleSubmit = e => {
